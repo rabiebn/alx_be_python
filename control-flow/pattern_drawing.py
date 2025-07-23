@@ -3,7 +3,9 @@
 ## 
 
 size = int(input("Enter the size of the pattern: "))
-line = "*" * size
+line = size
 while size > 0:
-    print(line)
+    for i in range(line):
+        print("*", end="")
+    print("")
     size -= 1
