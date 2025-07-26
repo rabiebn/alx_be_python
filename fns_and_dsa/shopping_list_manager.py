@@ -17,10 +17,10 @@ def main():
         choice = input("Enter your choice: ")
         match choice:
             case "1":
-                add = input("Enter the name of the item you want to add: ")
+                add = input("Enter the item to add: ")
                 shopping_list += add
             case "2":
-                rmv = input("Enter the name of the item you want to remove: ")
+                rmv = input("Enter the item to remove: ")
                 shopping_list.remove(rmv)
             case "3":
                 for item in shopping_list:
