@@ -2,7 +2,7 @@
 
 ## Create a Simple Bank Account Class
 
-class BankAccount():
+class BankAccount:
     
     def __init__(self, amount=0):
         self.account_balance = amount
