@@ -1,6 +1,6 @@
 ## 
 
-class Book():
+class Book:
 
     _is_checked_out = False
 
@@ -8,7 +8,7 @@ class Book():
         self.author = author
         self.title = title
 
-class Library():
+class Library:
 
     _books = []
 
