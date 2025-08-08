@@ -5,22 +5,20 @@ from simple_calculator import SimpleCalculator
 
 class TestSimpleCalculator(unittest.TestCase):
 
+    def setUp(self):
+        self.calc = SimpleCalculator()
+
     def test_add(self):
-        result = SimpleCalculator.add(self, 10, 3)
-        self.assertEqual(result, 13)
+        self.assertEqual(self.calc.add(10, 2), 12)
+        self.assertEqual(self.calc.add(22, 2), 24)
 
     def test_subtract(self):
-        result = SimpleCalculator.subtract(self, 10, 3)
-        self.assertEqual(result, 7)
+        self.assertEqual(self.calc.subtract(10, 2), 8)
 
     def test_multiply(self):
-        result = SimpleCalculator.multiply(self, 4, 3)
-        self.assertEqual(result, 12)
+        self.assertEqual(self.calc.multiply(2, 5), 10)
+        self.assertEqual(self.calc.multiply(2, -5), -10)
 
     def test_divide(self):
-        result = SimpleCalculator.divide(self, 6, 3)
-        self.assertEqual(result, 2)
-
-    def test_divide_by_zero(self):
-        result = SimpleCalculator.divide(self, 6, 0)
-        self.assertRaises(ZeroDivisionError)
+        self.assertEqual(self.calc.divide(50, 5), 10)
+        self.assertIsNone(self.calc.divide(1, 0))
